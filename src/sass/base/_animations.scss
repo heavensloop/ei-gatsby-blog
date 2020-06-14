@@ -1,0 +1,56 @@
+@keyframes flipdown{
+
+    0%{
+
+        opacity: 0;
+        transform-origin: top center;
+        transform: rotateX(-90deg);
+    }
+    5%{
+
+        opacity: 1;
+    }
+    80%{
+        transform: rotateX(8deg);
+    }
+      
+    83%{
+        transform: rotateX(6deg);
+    }
+      
+    92%{
+        transform: rotateX(-3deg);
+    }
+      
+    100%{
+        transform-origin: top center;
+      transform: rotateX(0deg); 
+    }
+      
+}
+
+
+@-webkit-keyframes pulse {
+    25% {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1);
+    }
+    50% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    75% {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+
+
+
+
+  
+  

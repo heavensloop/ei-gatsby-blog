@@ -1,22 +1,31 @@
 import React from "react"
-import { Link } from "gatsby"
+import WelcomeItems from "../components/WelcomeItems"
+import MainLayout from "../layouts/MainLayout"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+const Welcome = () => {
+  return (
+    <MainLayout id="index-page">
+      <div className="grid l-grid-height">
+        <div className="l-grid-left bg-color l-height-100 d-flex flex-direction">
+          {/* <h3 className="grid--title u-margin-top-huge u-padding-left u-padding-right u-center-text">
+                        {name}
+                    </h3>
+                    <p className="grid-intro u-padding-left-small u-padding-right-small u-center-text">
+                        {introduction}
+                    </p> */}
+          <WelcomeItems
+            name="Esther"
+            introduction="Hi, my name is Esther Itolima. I'm a Front-End Developer base in
+                        Lagos, Nigeria. I'm passionate about building maintainable,
+                        accessible and responsive websites."
+          />
+        </div>
+        <div className="l-grid-right">
+          <div className="profile-image" />
+        </div>
+      </div>
+    </MainLayout>
+  )
+}
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
-
-export default IndexPage
+export default Welcome

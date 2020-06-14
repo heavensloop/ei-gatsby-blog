@@ -1,0 +1,29 @@
+// Import font-awesome
+// @import "font-awesome/scss/font-awesome.scss";
+// All Base specific partials
+
+@import url("https://fonts.googleapis.com/css?family=Merriweather|Montserrat|Poppins&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+@import 'base/colors';
+@import 'base/variables';
+@import 'base/utilities';
+@import 'base/mixins';
+@import 'base/reset';
+@import 'base/animations';
+@import 'base/icons';
+
+// All layout specific partials
+
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/body';
+@import 'layout/main';
+@import 'layout/navigation';
+@import 'layout/section';
+
+// All modules specific partials
+
+@import 'modules/card';
+@import 'modules/grid';
+

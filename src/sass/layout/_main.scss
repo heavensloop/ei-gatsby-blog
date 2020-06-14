@@ -1,0 +1,334 @@
+// .App{
+//     position: absolute;
+//     // width: 100%;
+// }
+
+// Main
+
+#main {
+    margin-left: 219px;
+    height: 100%;
+    height: 100vh;
+
+    .text-color-primary{
+        color: $color-primary;
+    }
+
+
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 100%;
+        min-height: 100vh;
+        margin: 0 auto;
+
+        .l-grid-height{
+            height: 100vh;
+        }
+        
+    }
+
+    
+
+
+
+    .l-grid-left{
+      height: 100vh;
+
+        &.bg-color {
+            background-color: $color-primary;
+            height: 100%;
+        }
+
+        // &.flex-direction{
+        //     flex-direction: column;
+        // }
+
+        .grid--title{
+            font-size: $biggest-font-size;
+            margin-bottom: 0;
+        }
+        .grid-intro{
+            line-height: 1.5rem;
+            letter-spacing: 1.5px;
+        }
+
+        // about page styles
+        & img{
+            border: 1px solid $color-primary;
+            border-radius: 200px;
+            width: 60%;
+            background: $color-primary;
+        }
+    }
+
+    .l-grid-right{
+        .profile-image {
+            height: 100%;
+            background-image: url(../../images/img1.png);
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        
+    }
+
+    // Projects
+
+    .showcase1 {
+      width: 100%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      display: flex;
+    }
+    .w-80{
+      width: 80%;
+      margin: auto;
+    }
+
+    .row{
+      margin: 0 auto;
+      display: flex;
+      flex-wrap:wrap;
+      flex-direction:row;
+
+      .col-6 {
+        width: 50%;
+        display: flex;
+
+        .h3, p{
+          color: $color-primary;
+        }
+      }
+    }
+
+}
+
+
+
+// Talks
+
+  .container{
+    width: 80%;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  
+    
+    
+      .accordion-item{
+        background-color: $color-white;
+        border-radius: .4rem;
+        margin-bottom: 3rem;
+        padding: 1rem;
+        border: 2px solid #1a292d;
+        box-shadow: .5rem 2px .5rem rgba(218, 213, 213, 0.1);
+    
+        // &:target .answer{
+        //   max-height: 20rem;
+        // }
+    
+        &:target .accordion-link .fa-angle-right{
+          display: block;
+        }
+    
+        &:target .accordion-link .fa-angle-down{
+          display: block;
+        }
+    
+        .accordion-link, .close{
+          font-size: 16px;
+          color: #000000;
+          text-decoration: none;
+          background-color: $color-white;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between; 
+          padding: 1rem 0;
+    
+    
+          & i{
+            color: $color-primary;
+            padding: .5rem;
+            font-size: 30px;
+          }
+    
+          & .fa-angle-down{
+            display: block;
+          }
+        }
+    
+        .answer{
+          max-height: 0;
+          overflow: hidden;
+          position: relative;
+          background-color: $color-primary;
+          transition: max-height 650ms;
+    
+          &::before{
+            content: "";
+            position: absolute;
+            width: .6rem;
+            height: 90%;
+            background-color: #ccc;
+            top: 5%;
+            left: 0;
+            transform: translate(-50%);
+          }
+    
+          & p{
+            color: $color-white;
+            font-size: 16px;
+            padding: .1rem 1.5rem;
+          }
+        }
+
+        .open{
+          max-height: 20rem;
+        }
+      }
+  }
+
+
+
+
+  
+  // Phone media query
+  @media (max-width: 760px) {
+     
+
+    #main{
+        display: block;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
+        height: calc(var(--vh, 1vh) * 100);
+
+       
+      .l-grid-left{
+        max-width: 100%;
+        height: 100%;
+        margin: 0 auto;
+
+          &.bg-color {
+            height: auto;
+          }
+
+          & img{
+            margin: 0 auto;
+            display: block;
+          }
+          .u-margin-top-medium {
+            margin-top: -3rem !important;
+          }
+
+
+
+          .u-margin-top-huge {
+            margin-top: 2rem !important;
+          }
+      }
+      .l-grid-right{
+        // padding: 30px 0px;
+        margin-top: 1rem !important;
+
+        &.profile-image {
+            height: 100%;
+            background-image: url(../../images/img1.png);
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: contain !important;
+        }
+
+        // .u-margin-top-medium {
+        //   display: none !important;
+        // }
+
+      }
+
+      .grid{
+        position: relative;
+        top: -1%;
+        display: grid;
+        grid-template-columns: 1fr !important;
+        max-width: 100% !important;
+        grid-template-rows: auto 300px !important;
+
+      }
+    
+      .row .col-6 {
+        display: contents;
+  
+        div{
+            margin: 0 auto;
+            align-items: center;
+            justify-content: center;
+
+            .showcase_description, .h3{
+                text-align: center;
+            }
+        }
+    
+    }
+
+    
+  }
+
+  .container{
+    margin-top: 35px;
+  }
+  
+  }
+
+  /* ----------- iPad Pro 10.5" ----------- */
+
+/* Portrait and Landscape */
+@media (min-device-width: 834px) 
+  and (max-device-width: 1112px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: $color-primary rgb(105, 105, 105);
+  }
+  *::-webkit-scrollbar {
+    width: 8px;
+  }
+  *::-webkit-scrollbar-track {
+    background: rgb(105, 105, 105);
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: $color-primary;
+    border-radius: 20px;
+    border: 2px solid rgb(105, 105, 105);
+  }
+}
+
+#side-nav{
+  scrollbar-width: thin;
+  scrollbar-color:  rgb(105, 105, 105);
+  overflow-y: scroll;
+  // overflow-x: scroll;
+  
+  
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  // &::-webkit-scrollbar-track {
+  //   background: rgb(105, 105, 105);
+  // }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgb(105, 105, 105);
+    border-radius: 20px;
+    border: 2px solid rgb(105, 105, 105);
+  }
+
+
+  
+}
+
+
+

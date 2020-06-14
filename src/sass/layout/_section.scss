@@ -1,0 +1,66 @@
+// Section
+
+#side-nav{
+    width: 220px;
+    position: relative;
+    left: 0;
+    top: 0;
+    overflow-x: hidden;
+
+
+    &.l-bg-color{
+        background: $color-primary;
+        height: 100%;
+    }
+
+    &.is-fixed{
+        position: fixed;
+    }
+}
+
+#contacts{
+
+    .contact--email a:hover{
+        text-decoration: underline;
+    }
+
+    .contacts-links{
+        
+        .contacts--list{
+            justify-content: space-around;
+            
+            &.d-flex{
+                display: flex;
+            }
+        }
+        .icon-bg{
+            background:  $bg-color-white;
+            width: 18px;
+            height: 18px;
+            text-align: center;
+            color: $color-primary;
+            border-radius: 5px;
+
+        }
+    }
+}
+
+@media (max-width: 760px) {
+    #side-nav{
+        display: block !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        flex: none !important;
+        padding-bottom: 15px;
+
+
+        &.is-fixed{
+        position: static;
+    }
+    }
+
+    #contacts{
+        text-align: center !important;
+    }
+  
+  }
